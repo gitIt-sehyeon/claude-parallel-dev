@@ -1,0 +1,19 @@
+{
+  "$comment": "이 레포를 Claude Code 마켓플레이스로 만드는 파일. 심링크 모드로 혼자 쓸 때는 안 봐도 됩니다. 팀에 배포할 때부터 의미가 생깁니다.",
+
+  "name": "claude-tools",
+  "description": "Claude Code 에이전트 및 커맨드 모음",
+  "owner": {
+    "name": "TODO: 이름 또는 팀 이름",
+    "email": "TODO: 연락 메일"
+  },
+  "plugins": [
+    {
+      "name": "parallel-dev",
+      "displayName": "병렬 개발 워크플로",
+      "description": "worktree 기반 병렬 워커 + 오케스트레이터",
+      "source": "./plugins/parallel-dev",
+      "version": "0.1.0"
+    }
+  ]
+}

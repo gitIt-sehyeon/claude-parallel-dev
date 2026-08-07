@@ -1,0 +1,11 @@
+{
+  "name": "parallel-dev",
+  "displayName": "병렬 개발 워크플로",
+  "description": "git worktree 로 격리된 워커를 병렬로 돌리고 결과를 취합해 보고하는 오케스트레이터 셋",
+  "version": "0.1.0",
+  "author": {
+    "name": "TODO: 팀 이름"
+  },
+  "keywords": ["worktree", "parallel", "orchestrator", "code-review"],
+  "category": "productivity"
+}

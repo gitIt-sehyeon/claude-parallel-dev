@@ -1,0 +1,12 @@
+# worktree 를 만들 때 복사해 넣을 gitignore 대상 파일들.
+# 이게 없으면 각 워커의 worktree 에 .env 가 없어서 빌드/테스트가 실패합니다.
+# 프로젝트에 맞게 수정하세요.
+
+.env
+.env.local
+.env.test
+
+# 예시 — 필요한 것만 남기세요
+# config/local.json
+# .npmrc
+# certs/dev.pem

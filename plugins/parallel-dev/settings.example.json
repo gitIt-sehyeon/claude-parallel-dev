@@ -1,0 +1,81 @@
+{
+  "$comment": "팀 공유 설정. 리포에 커밋해서 씁니다. 개인 오버라이드는 .claude/settings.local.json 에.",
+
+  "worktree": {
+    "baseRef": "fresh"
+  },
+
+  "permissions": {
+    "$comment": "병렬 워커가 권한 프롬프트에서 멈추면 병렬성이 죽습니다. 자주 쓰는 안전한 명령만 미리 허용하세요. 프로젝트에 맞게 반드시 수정할 것.",
+
+    "allow": [
+      "Read(./**)",
+      "Edit(./src/**)",
+      "Edit(./tests/**)",
+      "Edit(./test/**)",
+      "Write(./src/**)",
+      "Write(./tests/**)",
+      "Write(./test/**)",
+
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git switch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git fetch:*)",
+      "Bash(git worktree list:*)",
+
+      "Bash(gh pr create:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh pr list:*)",
+
+      "Bash(npm run lint:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm test:*)",
+      "Bash(npx tsc:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm test:*)",
+
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(comm:*)",
+      "Bash(sort:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(uniq:*)",
+      "Bash(tr:*)",
+      "Bash(basename:*)",
+      "Bash(dirname:*)"
+    ],
+
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pip install:*)"
+    ],
+
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git rebase:*)",
+      "Bash(git clean:*)",
+      "Bash(git worktree remove:*)",
+      "Bash(rm -rf:*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/secrets/**)",
+      "Read(./**/*.pem)",
+      "Read(./**/id_rsa*)"
+    ]
+  }
+}
